@@ -48,10 +48,12 @@ export default class ScanScreen extends React.Component {
           else if (buttonState === "normal"){
             return(
               <View style={styles.container}>
+                      
     
               <Text style={styles.displayText}>{
                 hasCameraPermissions===true ? this.state.scannedData: "Request Camera Permission"
-              }</Text>     
+              }</Text> 
+                  
               <TouchableOpacity
                 onPress={this.getCameraPermissions}
                 style={styles.scanButton}>
@@ -73,14 +75,24 @@ const styles = StyleSheet.create({
     },
     displayText:{
       fontSize: 15,
-      textDecorationLine: 'underline'
+      textDecorationLine: 'underline',
+      marginTop:'70%'
     },
     scanButton:{
       backgroundColor: '#2196F3',
-      padding: 10,
-      margin: 10
+      borderWidth:2,
+      paddingTop:10,
+      paddingBottom:30,
+      alignItems:'center',
+      alignSelf:'center',
+      marginTop:'10%'
     },
     buttonText:{
       fontSize: 20,
+      alignContent:'center'
+    },
+    Image: {
+      width:150,
+      height: 150,
     }
   });
